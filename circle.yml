@@ -6,3 +6,6 @@ dependencies:
     - curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sudo sh
     - sudo apt-get update -qq
     - sudo apt-get install mkr
+test:
+  override:
+    - rake
