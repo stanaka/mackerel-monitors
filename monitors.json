@@ -23,7 +23,7 @@
             "type": "host",
             "metric": "loadavg5",
             "operator": ">",
-            "warning": 1,
+            "warning": 2,
             "critical": 5,
             "duration": 5,
             "scopes": [
