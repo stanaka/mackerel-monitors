@@ -1,0 +1,83 @@
+{
+    "monitors": [
+        {
+            "id": "2cYjfibBkaj",
+            "type": "connectivity",
+            "excludeScopes": [
+                "stanaka: client"
+            ]
+        },
+        {
+            "id": "2chUanP5ejG",
+            "name": "HDD",
+            "type": "host",
+            "metric": "disk.sda.writes.delta",
+            "operator": ">",
+            "warning": 10,
+            "critical": 2e+09,
+            "duration": 3
+        },
+        {
+            "id": "2sXrofF2Qif",
+            "name": "loadavg",
+            "type": "host",
+            "metric": "loadavg5",
+            "operator": ">",
+            "warning": 1,
+            "critical": 5,
+            "duration": 5,
+            "scopes": [
+                "stanaka: client"
+            ]
+        },
+        {
+            "id": "2sNHFEZYjjm",
+            "name": "cpu10",
+            "type": "host",
+            "metric": "cpu%",
+            "operator": ">",
+            "warning": 70,
+            "critical": 90,
+            "duration": 3
+        },
+        {
+            "id": "2rFuYGwMqJU",
+            "name": "Filesystem %",
+            "type": "host",
+            "metric": "disk%",
+            "operator": ">",
+            "warning": 96,
+            "critical": 99,
+            "duration": 3
+        },
+        {
+            "id": "2azf4eqgZfq",
+            "name": "memory",
+            "type": "host",
+            "metric": "memory%",
+            "operator": ">",
+            "warning": 90,
+            "critical": 95,
+            "duration": 3
+        },
+        {
+            "id": "2hpMdFTR6DS",
+            "name": "swap %",
+            "type": "host",
+            "metric": "swap%",
+            "operator": ">",
+            "warning": 50,
+            "critical": 90,
+            "duration": 3,
+            "scopes": [
+                "sample"
+            ]
+        },
+        {
+            "id": "2toqeEwNSFj",
+            "name": "blog.stanaka.org",
+            "type": "external",
+            "url": "http://blog.stanaka.org"
+        }
+    ]
+}
