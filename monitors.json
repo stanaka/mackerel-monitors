@@ -77,7 +77,9 @@
             "id": "2toqeEwNSFj",
             "name": "blog.stanaka.org",
             "type": "external",
-            "url": "http://blog.stanaka.org"
+            "url": "http://blog.stanaka.org",
+            "service": "stanaka",
+            "maxCheckAttempts": 1
         }
     ]
 }
