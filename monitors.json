@@ -23,7 +23,7 @@
             "type": "host",
             "metric": "loadavg5",
             "operator": ">",
-            "warning": 2,
+            "warning": 3,
             "critical": 5,
             "duration": 5,
             "scopes": [
@@ -72,6 +72,28 @@
             "scopes": [
                 "sample"
             ]
+        },
+        {
+            "id": "2wsJRqfgBE1",
+            "name": "app - access_latency.avg",
+            "type": "service",
+            "metric": "access_latency.avg",
+            "operator": ">",
+            "warning": 5,
+            "critical": 10,
+            "duration": 3,
+            "service": "app"
+        },
+        {
+            "id": "2wsJTtF6eS1",
+            "name": "app - error_access_rate",
+            "type": "service",
+            "metric": "error_access_rate.5xx_percentage",
+            "operator": ">",
+            "warning": 1,
+            "critical": 5,
+            "duration": 3,
+            "service": "app"
         },
         {
             "id": "2toqeEwNSFj",
