@@ -28,7 +28,8 @@
             "duration": 5,
             "scopes": [
                 "stanaka: client"
-            ]
+            ],
+            "notificationInterval": 60
         },
         {
             "id": "2sNHFEZYjjm",
