@@ -103,6 +103,17 @@
             "url": "http://blog.stanaka.org",
             "service": "stanaka",
             "maxCheckAttempts": 1
+        },
+        {
+            "id": "2yanM1pFhbU",
+            "name": "test",
+            "type": "external",
+            "url": "http://blog.stanaka.org",
+            "service": "stanaka",
+            "maxCheckAttempts": 3,
+            "responseTimeCritical": 10,
+            "responseTimeWarning": 5,
+            "responseTimeDuration": 3
         }
     ]
 }
