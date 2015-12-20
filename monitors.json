@@ -75,6 +75,17 @@
             ]
         },
         {
+            "id": "2zfzSd5i3bd",
+            "name": "app - access_latency.avg",
+            "type": "service",
+            "metric": "access_latency.avg",
+            "operator": "<",
+            "warning": 2,
+            "critical": 1,
+            "duration": 1,
+            "service": "app"
+        },
+        {
             "id": "2wsJRqfgBE1",
             "name": "app - access_latency.avg",
             "type": "service",
