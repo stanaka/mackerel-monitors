@@ -1,26 +1,20 @@
 {
     "monitors": [
         {
-            "id": "2cYjfibBkaj",
-            "type": "connectivity",
-            "excludeScopes": [
-                "stanaka: client"
-            ]
-        },
-        {
             "id": "2chUanP5ejG",
             "name": "HDD",
             "type": "host",
             "metric": "disk.sda.writes.delta",
             "operator": ">",
             "warning": 10,
-            "critical": 2e+09,
+            "critical": 2000000000,
             "duration": 3
         },
         {
             "id": "2sXrofF2Qif",
             "name": "loadavg",
             "type": "host",
+            "notificationInterval": 60,
             "metric": "loadavg5",
             "operator": ">",
             "warning": 3,
@@ -28,8 +22,7 @@
             "duration": 5,
             "scopes": [
                 "stanaka: client"
-            ],
-            "notificationInterval": 60
+            ]
         },
         {
             "id": "2sNHFEZYjjm",
@@ -75,56 +68,67 @@
             ]
         },
         {
-            "id": "2zfzSd5i3bd",
-            "name": "app - access_latency.avg",
-            "type": "service",
-            "metric": "access_latency.avg",
-            "operator": "<",
-            "warning": 2,
-            "critical": 1,
-            "duration": 1,
-            "service": "app"
+            "id": "2cYjfibBkaj",
+            "name": "connectivity",
+            "type": "connectivity",
+            "excludeScopes": [
+                "stanaka: client"
+            ]
         },
         {
             "id": "2wsJRqfgBE1",
             "name": "app - access_latency.avg",
             "type": "service",
+            "service": "app",
             "metric": "access_latency.avg",
             "operator": ">",
             "warning": 5,
             "critical": 10,
-            "duration": 3,
-            "service": "app"
+            "duration": 3
         },
         {
             "id": "2wsJTtF6eS1",
             "name": "app - error_access_rate",
             "type": "service",
+            "service": "app",
             "metric": "error_access_rate.5xx_percentage",
             "operator": ">",
             "warning": 1,
             "critical": 5,
-            "duration": 3,
-            "service": "app"
+            "duration": 3
         },
         {
             "id": "2toqeEwNSFj",
             "name": "blog.stanaka.org",
             "type": "external",
+            "method": "GET",
             "url": "http://blog.stanaka.org",
+            "maxCheckAttempts": 1,
             "service": "stanaka",
-            "maxCheckAttempts": 1
+            "headers": [
+                {
+                    "name": "Cache-Control",
+                    "value": "no-cache"
+                }
+            ]
         },
         {
             "id": "2yanM1pFhbU",
             "name": "test",
             "type": "external",
+            "method": "GET",
             "url": "http://blog.stanaka.org",
-            "service": "stanaka",
             "maxCheckAttempts": 3,
+            "service": "stanaka",
             "responseTimeCritical": 10,
             "responseTimeWarning": 5,
-            "responseTimeDuration": 3
+            "responseTimeDuration": 3,
+            "headers": [
+                {
+                    "name": "Cache-Control",
+                    "value": "no-cache"
+                }
+            ]
         }
     ]
 }
