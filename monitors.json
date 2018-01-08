@@ -8,7 +8,8 @@
             "operator": ">",
             "warning": 10,
             "critical": 2000000000,
-            "duration": 3
+            "duration": 3,
+            "maxCheckAttempts": 1
         },
         {
             "id": "2sXrofF2Qif",
@@ -20,6 +21,7 @@
             "warning": 3,
             "critical": 5,
             "duration": 5,
+            "maxCheckAttempts": 1,
             "scopes": [
                 "stanaka: client"
             ]
@@ -32,7 +34,8 @@
             "operator": ">",
             "warning": 70,
             "critical": 90,
-            "duration": 3
+            "duration": 3,
+            "maxCheckAttempts": 1
         },
         {
             "id": "2rFuYGwMqJU",
@@ -42,7 +45,8 @@
             "operator": ">",
             "warning": 96,
             "critical": 99,
-            "duration": 3
+            "duration": 3,
+            "maxCheckAttempts": 1
         },
         {
             "id": "2azf4eqgZfq",
@@ -52,7 +56,8 @@
             "operator": ">",
             "warning": 90,
             "critical": 95,
-            "duration": 3
+            "duration": 3,
+            "maxCheckAttempts": 1
         },
         {
             "id": "2hpMdFTR6DS",
@@ -63,6 +68,7 @@
             "warning": 50,
             "critical": 90,
             "duration": 3,
+            "maxCheckAttempts": 1,
             "scopes": [
                 "sample"
             ]
@@ -84,7 +90,8 @@
             "operator": ">",
             "warning": 5,
             "critical": 10,
-            "duration": 3
+            "duration": 3,
+            "maxCheckAttempts": 1
         },
         {
             "id": "2wsJTtF6eS1",
@@ -95,7 +102,8 @@
             "operator": ">",
             "warning": 1,
             "critical": 5,
-            "duration": 3
+            "duration": 3,
+            "maxCheckAttempts": 1
         },
         {
             "id": "2toqeEwNSFj",
