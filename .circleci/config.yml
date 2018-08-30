@@ -16,3 +16,8 @@ jobs:
       - run:
           name: Run tests
           command: rake
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
