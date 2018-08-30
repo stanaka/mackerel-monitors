@@ -5,7 +5,9 @@ jobs:
       - image: circleci/ruby:2.4.2-jessie-node
     steps:
       - checkout
-      - run: curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sudo sh
+      - run: 
+          name: Set up a package repository for mackrel commands
+          command: curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sudo sh
       - run: sudo apt-get update -qq
       - run: sudo apt-get install mkr
   test:
