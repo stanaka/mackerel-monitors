@@ -9,7 +9,12 @@ jobs:
       - run: 
           name: Set up a package repository for mackrel commands
           command: curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sudo sh
-      - run: sudo apt-get update -qq
+      - run:
+          name: Update package sources
+          command: echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list && echo "deb http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
+      - run:
+          name: Update packages
+          command: sudo apt-get update -qq
       - run:
           name: Install mkr command
           command: sudo apt-get install mkr
