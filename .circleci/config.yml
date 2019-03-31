@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Update package sources
-          command: echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list && echo "deb http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
+          command: sudo echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list && sudo echo "deb http://security.debian.org jessie/updates main" >> /etc/apt/sources.list
       - run: 
           name: Set up a package repository for mackrel commands
           command: curl -fsSL https://mackerel.io/assets/files/scripts/setup-apt.sh | sudo sh
