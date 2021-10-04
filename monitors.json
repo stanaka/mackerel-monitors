@@ -76,8 +76,8 @@
         {
             "id": "2cYjfibBkaj",
             "name": "connectivity",
-            "type": "connectivity",
             "alertStatusOnGone": "CRITICAL",
+            "type": "connectivity",
             "excludeScopes": [
                 "stanaka: client"
             ]
@@ -114,23 +114,8 @@
             "url": "http://blog.stanaka.org",
             "maxCheckAttempts": 1,
             "service": "stanaka",
-            "headers": [
-                {
-                    "name": "Cache-Control",
-                    "value": "no-cache"
-                }
-            ]
-        },
-        {
-            "id": "2yanM1pFhbU",
-            "name": "test",
-            "type": "external",
-            "method": "GET",
-            "url": "http://blog.stanaka.org",
-            "maxCheckAttempts": 3,
-            "service": "stanaka",
-            "responseTimeCritical": 10,
-            "responseTimeWarning": 5,
+            "responseTimeCritical": 500,
+            "responseTimeWarning": 100,
             "responseTimeDuration": 3,
             "headers": [
                 {
